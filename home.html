@@ -10,10 +10,14 @@
 
 </head>
 <body>
+    <h3>Fire image is jpg, flower is webp</h3>
     <picture>
         <source media="(min-width: 960px)" srcset="https://www.gstatic.com/webp/gallery/4.webp" />
         <source media="(min-width: 600px)" srcset="https://www.gstatic.com/webp/gallery/5.jpg" />
         <img src="https://www.gstatic.com/webp/gallery/5.jpg"/>
     </picture>
+    <br>
+    <h3>Image replace to jpg for webp load error</h3>
+    <img src="https://www.gstatic.com/webp/gallery/4.webp" onerror="this.onerror=null; this.src='https://www.gstatic.com/webp/gallery/5.jpg'">
 </body>
 </html>
