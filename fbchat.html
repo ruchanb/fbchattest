@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The picture element</title>
+
+</head>
+<body>
+    <h1>fb document sucks</h1>
+  <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '3754657781221310',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v9.0'
+        });
+        FB.Event.subscribe('fb-customerchat', function(e) {
+          console.log("messenger_checkbox event");
+          console.log(e);
+          
+          if (e.event == 'rendered') {
+              console.log("Plugin was rendered");
+          } else if (e.event == 'checkbox') {
+              var checkboxState = e.state;
+              console.log("Checkbox state: " + checkboxState);
+          } else if (e.event == 'not_you') {
+              console.log("User clicked 'not you'");
+          } else if (e.event == 'hidden') {
+              console.log("Plugin was hidden");
+          }
+    
+        });
+      };
+      
+      (function (d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (d.getElementById(id)) return;
+                      js = d.createElement(s); js.id = id;
+                      js.src = 'https://connect.facebook.net/en_GB/sdk/xfbml.customerchat.js';
+                      fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+</body>
+</html>
