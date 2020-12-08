@@ -20,7 +20,10 @@
       version          : 'v9.0'
     });
   };
+  var fbcstarted=false;
 function start_fb_customer_chat(sb){
+  if(fbcstarted==true) return;
+  fbcstarted=true;
     (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
