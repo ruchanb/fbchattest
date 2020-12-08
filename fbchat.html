@@ -20,8 +20,25 @@
       version          : 'v9.0',
       autoLogAppEvents: true
     });
-   
+    var startTime, endTime;
+
+    function start() {
+      startTime = new Date();
+    };
+
+    function end() {
+      endTime = new Date();
+      var timeDiff = endTime - startTime; //in ms
+      // strip the ms
+      //timeDiff /= 1000;
+
+      // get seconds 
+      var seconds = Math.round(timeDiff);
+      console.log(seconds + " ms elapsed");
+    }
+    start();
     FB.Event.subscribe('xfbml.render',  function(){
+      end();
       setTimeout(function(){
         if(document.getElementById("fbcc_start")) document.getElementById("fbcc_start").remove();
         FB.CustomerChat.showDialog();
