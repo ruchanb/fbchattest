@@ -22,8 +22,10 @@
     });
    
     FB.Event.subscribe('xfbml.render',  function(){
-      if(document.getElementById("fbcc_start")) document.getElementById("fbcc_start").remove();
-      FB.CustomerChat.showDialog();
+      setTimeout(function(){
+        if(document.getElementById("fbcc_start")) document.getElementById("fbcc_start").remove();
+        FB.CustomerChat.showDialog();
+      },500);      
     });
    
   };
