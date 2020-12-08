@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <h1>fb document sucks 1</h1>
+    <h1>fb document sucks 2</h1>
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
@@ -20,12 +20,12 @@
       version          : 'v9.0'
     });
     FB.Event.subscribe('customerchat.load', function(){
-      FB.CustomerChat.show(true);
+      FB.CustomerChat.showDialog();
     });
     FB.Event.subscribe('customerchat.show', function(){
       document.getElementById("fbcc_start").remove();
     });
-    FB.CustomerChat.showDialog();
+   
   };
   var fbcstarted=false;
 function start_fb_customer_chat(sb){
