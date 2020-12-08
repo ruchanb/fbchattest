@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <h1>fb document sucks  not lazy c</h1>
+    <h1>fb document sucks  not lazy D</h1>
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
@@ -19,16 +19,16 @@
       xfbml            : false,
       version          : 'v9.0'
     });
-   //FB.xfbml.parse();
+    FB.xfbml.parse();
     FB.CustomerChat.show(true);
     // FB.Event.subscribe('customerchat.load', function(){
     //   FB.CustomerChat.show(true);
     //   FB.CustomerChat.showDialog();
     // });
-    // FB.Event.subscribe('customerchat.show', function(){
-    //   if(document.getElementById("fbcc_start")) document.getElementById("fbcc_start").remove();
-    //   FB.CustomerChat.showDialog();
-    // });
+    FB.Event.subscribe('customerchat.show', function(){
+      if(document.getElementById("fbcc_start")) document.getElementById("fbcc_start").remove();
+      FB.CustomerChat.showDialog();
+    });
    
   };
   var fbcstarted=false;
