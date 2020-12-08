@@ -16,12 +16,12 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      xfbml            : false,
+      xfbml            : true,
       version          : 'v9.0',
       autoLogAppEvents: true
     });
-    FB.xfbml.parse();
-    FB.CustomerChat.show(true);
+    // FB.xfbml.parse();
+    // FB.CustomerChat.show(true);
     // FB.Event.subscribe('customerchat.load', function(){
     //   FB.CustomerChat.show(true);
     //   FB.CustomerChat.showDialog();
