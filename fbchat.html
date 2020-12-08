@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <h1>fb document sucks  not lazy b</h1>
+    <h1>fb document sucks  not lazy c</h1>
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
@@ -19,7 +19,8 @@
       xfbml            : false,
       version          : 'v9.0'
     });
-   
+   //FB.xfbml.parse();
+    FB.CustomerChat.show(true);
     // FB.Event.subscribe('customerchat.load', function(){
     //   FB.CustomerChat.show(true);
     //   FB.CustomerChat.showDialog();
