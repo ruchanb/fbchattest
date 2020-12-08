@@ -20,7 +20,7 @@
       version          : 'v9.0'
     });
     FB.Event.subscribe('customerchat.load', function(){
-      FB.CustomerChat.show(shouldShowDialog: boolean);
+      FB.CustomerChat.show(true);
     });
     FB.Event.subscribe('customerchat.show', function(){
       document.getElementById("fbcc_start").remove();
