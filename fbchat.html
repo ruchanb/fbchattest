@@ -19,6 +19,9 @@
       xfbml            : true,
       version          : 'v9.0'
     });
+    FB.Event.subscribe('customerchat.load', function(){
+      document.getElementById("fbcc_start").remove();
+  });
   };
   var fbcstarted=false;
 function start_fb_customer_chat(sb){
@@ -30,11 +33,9 @@ function start_fb_customer_chat(sb){
     js = d.createElement(s); js.id = id;
     js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
     fjs.parentNode.insertBefore(js, fjs);
-    FB.CustomerChat.showDialog();
+    //FB.CustomerChat.showDialog();
   }(document, 'script', 'facebook-jssdk'));
-  FB.Event.subscribe('customerchat.load', function(){
-    document.getElementById("fbcc_start").remove();
-  });
+ 
   
 }
 </script>
